@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no" />
+    <title>Demo cells-slidedown-animation</title>
+    <script src="../../webcomponentsjs/webcomponents-lite.js"></script>
+    <link rel="lazy-import" href="../../coronita-icons/coronita-icons.html">
+    <link rel="import" href="../../cells-demo-helper/cells-demo-helper.html">
+    <link rel="lazy-import" href="../cells-slidedown-animation.html">
+    <link rel="lazy-import" href="css/demo-styles.html">
+  </head>
+  <body unresolved ontouchstart>
+    <cells-demo-helper available-themes='["cells-coronita-base-theme"]'>
+      <cells-demo-case heading="Basic" description="A basic example">
+        <template>
+          <cells-slidedown-animation id="slideDownElem">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt ratione sed quas consectetur non atque beatae in optio, impedit ipsum porro alias soluta, ullam inventore rerum quae. Impedit, aut eveniet?
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam rerum dicta error aut culpa dolores sapiente corrupti commodi enim voluptas accusantium excepturi totam, placeat omnis odio? Obcaecati perferendis autem velit.
+          </cells-slidedown-animation>
+          <div>
+            <button id="btnShow">Show</button>
+            <button id="btnHide">Hide</button>
+          </div>
+          <script>
+            document.getElementById('slideDownElem').slideUp();
+            document.getElementById('btnShow').addEventListener('click', function() {
+              document.getElementById('slideDownElem').slideDown();
+            });
+            document.getElementById('btnHide').addEventListener('click', function() {
+              document.getElementById('slideDownElem').slideUp();
+            });
+          </script>
+        </template>
+      </cells-demo-case>
+    </cells-demo-helper>
+  </body>
+</html>
