@@ -91,6 +91,7 @@
         this.$.section.style.height = this.animation.counter + 'px';
       } else {
         this.$.section.style.height = 0;
+        this.dispatchEvent(new CustomEvent('slideUp', {detail: {}}));
         clearInterval(this.animation.interval);
       }
     }
@@ -107,6 +108,7 @@
         this.$.section.style.height = this.animation.counter + 'px';
       } else {
         this.$.section.style.height = this.initialHeight + 'px';
+        this.dispatchEvent(new CustomEvent('slideDown', {detail: {}}));
         clearInterval(this.animation.interval);
       }
     }
